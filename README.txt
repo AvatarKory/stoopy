@@ -7,12 +7,13 @@ This program is licensed under the GNU General Public License V2.
 
 Release Notes V1.01
 -------------------
+
 The following changes were made in this release:
 * The "slow write" option is disabled by default. Using the -s option
-  enabled it.
+  enables it.
 * Added the parity options (-e and -o).
-* Added the hardware flow control (-f) option
-* Minot code clean up
+* Added the hardware flow control (-f) option.
+* Minor code clean up.
 
 Release Notes V1.0
 ------------------
@@ -26,7 +27,9 @@ Stoopy is really dumb. If you hit Control-D at any time, it
 will exit. By default, characters typed by the user and
 sent to the serial device have an inter-character delay
 of 50 milliseconds. This can be changed by the -d option
-or totally disabled with the -s option.
+or totally disabled with the -s option. NOTE: the
+slow write feature is disabled by default in later
+releases.
 
 Note that I have only tested this on Federoa Core and CentOS
 Linux distributions, but the termio library used by stoopy
@@ -48,4 +51,11 @@ at avatar dot com and I will try to add it.
 
 Have fun.
 
+TO DO
+-----
+
+* Need to create a serial device lock file. Currently,
+  it is possible to run two copies and stoopy using the
+  same serial port device and that results is Bad
+  Things Happening.
 
